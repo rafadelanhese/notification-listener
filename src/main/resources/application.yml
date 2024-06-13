@@ -1,0 +1,22 @@
+server:
+  port: 8082
+
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  cloud:
+    aws:
+      stack:
+        auto: false
+      region:
+        static: eu-central-1
+      credentials:
+        access-key: dummy
+        secret-key: dummy
+        profile:
+          name: test-profile
+      endpoint: http://localhost:4566
+
+aws:
+  sqs:
+    queue: http://sqs.eu-central-1.localhost.localstack.cloud:4566/000000000000/queue-notification
